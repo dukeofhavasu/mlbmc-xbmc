@@ -230,7 +230,7 @@ def playLatest(url):
 def getVideos(url):
         try:
             req = urllib2.Request(url)
-            req.addheaders = [('Referer', 'http://mlb.mlb.com/video/play.jsp?cid=mlb'),
+            req.addheaders = [('Referer', 'http://www.mlb.com/video/'),
                     ('Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0) Gecko/20100101 Firefox/4.0')]
             response = urllib2.urlopen(req)
             link=response.read()
