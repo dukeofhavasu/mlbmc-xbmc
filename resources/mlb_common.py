@@ -104,8 +104,8 @@ def getLengthInMinutes(length):
     minutes = int(l_split[-2])
     if int(l_split[-1]) >= 30:
         minutes += 1
-    if len(l_split) == 3:
-        minutes += (int(l_split[0]) * 60)
+    if len(l_split) >= 3:
+        minutes += (int(l_split[-3]) * 60)
     if minutes < 1:
         minutes = 1
     return minutes

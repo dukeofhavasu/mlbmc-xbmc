@@ -204,21 +204,6 @@ def mlbGame(event_id, full_count=False):
             if item.state.string == 'MEDIA_OFF':
                 addon_log('MEDIA_OFF: %s' %name)
                 continue
-                # try:
-                    # preview = soup.find('preview-url').contents[0]
-                    # if re.search('innings-index',str(preview)):
-                        # if debug == "true":
-                            # addon_log( 'No preview' )
-                        # raise Exception
-                    # else:
-                        # name = language(30032)+name
-                        # liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png")
-                        # liz.setInfo( type="Video", infoLabels={ "Title": name } )
-                        # liz.setProperty( "Fanart_Image", fanart1 )
-                        # ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=preview,listitem=liz)
-                # except:
-                    # xbmc.executebuiltin("XBMC.Notification("+language(30035)+","+language(30045)+",5000,"+icon+")")
-                    # return
 
             else:
                 verified_content.append((name,event_id,content_id,session,cookies['ipid'],cookies['fprt'],scenario,live))
@@ -227,21 +212,6 @@ def mlbGame(event_id, full_count=False):
     dialog = xbmcgui.Dialog()
     ret = dialog.select(language(30033), name_list)
     getGameURL(*verified_content[ret])
-
-                # u=(sys.argv[0]+"?url=&mode=9&name="+urllib.quote_plus(name)+"&event="+urllib.quote_plus(event_id)+"&content="+
-                   # urllib.quote_plus(content_id)+"&session="+urllib.quote_plus(session)+"&cookieIp="+urllib.quote_plus(cookies['ipid'])+
-                   # "&cookieFp="+urllib.quote_plus(cookies['fprt'])+"&scenario="+urllib.quote_plus(scenario)+"&live="+str(live))
-                # if 'successstatus' in str(blackout_status):
-                    # liz=xbmcgui.ListItem( coloring( name,"cyan",name ), iconImage=icon, thumbnailImage=icon)
-                # else:
-                    # liz=xbmcgui.ListItem(name, iconImage=icon)
-                # if item.type.string == 'audio':
-                    # liz.setInfo( type="Music", infoLabels={ "Title": name } )
-                # else:
-                    # liz.setInfo( type="Video", infoLabels={ "Title": name } )
-                # liz.setProperty( "Fanart_Image", fanart1 )
-                # liz.setProperty('IsPlayable', 'true')
-                # xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)
 
 
 def getGameURL(name,event,content,session,cookieIp,cookieFp,scenario,live):
