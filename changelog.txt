@@ -1,3 +1,6 @@
+Version 2.0.1
+clean up of the previous testing release
+
 Version 2.0.0.1
 a lot of code changes, this is a testing(beta) release
 added scrapping of mlb.com playlists

@@ -129,7 +129,6 @@ if mode==6:
 
 if mode==7:
     mlbtv.mlbGame(event)
-    # xbmcplugin.endOfDirectory(int(sys.argv[1]), cacheToDisc=True)
 
 if mode==8:
     mlb.getRealtimeVideo(url)
