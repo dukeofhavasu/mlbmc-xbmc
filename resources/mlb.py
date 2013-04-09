@@ -288,8 +288,13 @@ def getVideos(url, page=False):
                     items = get_playlist_page(0)
                 else:
                     items = (data['mediaContent'], False)
+            elif xml_url:
+                return getVideoListXml(xml_url)
         elif xml_url:
             return getVideoListXml(xml_url)
+        else:
+            addon_log('Did not find playlist source')
+            return
     else:
         items = get_playlist_page(page)
 
